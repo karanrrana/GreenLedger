@@ -1,0 +1,430 @@
+[
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_disposalInfo",
+				"type": "uint256"
+			},
+			{
+				"internalType": "bool",
+				"name": "_isSegregated",
+				"type": "bool"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_treatmentInfo",
+				"type": "uint256"
+			},
+			{
+				"internalType": "bool",
+				"name": "_otherTreatment",
+				"type": "bool"
+			}
+		],
+		"name": "registerDisposalWaste",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_facilityName",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_facilityTypeNo",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_facilityNo",
+				"type": "uint256"
+			}
+		],
+		"name": "registerFacility",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "bool",
+				"name": "_isSegregated",
+				"type": "bool"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_quantity",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_bQuantity",
+				"type": "uint256"
+			},
+			{
+				"internalType": "bool",
+				"name": "_isStored",
+				"type": "bool"
+			},
+			{
+				"internalType": "bool",
+				"name": "_binsProper",
+				"type": "bool"
+			},
+			{
+				"internalType": "bool",
+				"name": "_time24",
+				"type": "bool"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_temperature",
+				"type": "uint256"
+			}
+		],
+		"name": "registerHospitalWaste",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_vehicleNumber",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_status",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_eArrival",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_wasteRecorded",
+				"type": "string"
+			}
+		],
+		"name": "registerTransportWaste",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getDisposalWaste",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "disposalInfo",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "isSegregated",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint256",
+						"name": "treatmentInfo",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "otherTreatment",
+						"type": "bool"
+					}
+				],
+				"internalType": "struct WasteManage.DisposalWaste[]",
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_id",
+				"type": "uint256"
+			}
+		],
+		"name": "getDisposalWasteId",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "disposalInfo",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "isSegregated",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint256",
+						"name": "treatmentInfo",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "otherTreatment",
+						"type": "bool"
+					}
+				],
+				"internalType": "struct WasteManage.DisposalWaste",
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getFacility",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "facilityId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "enum WasteManage.FacilityType",
+						"name": "facilityType",
+						"type": "uint8"
+					},
+					{
+						"internalType": "string",
+						"name": "facilityName",
+						"type": "string"
+					}
+				],
+				"internalType": "struct WasteManage.Facility",
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getHospitalWaste",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "bool",
+						"name": "isSegregated",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint256",
+						"name": "quantity",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "bQuantity",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "isStored",
+						"type": "bool"
+					},
+					{
+						"internalType": "bool",
+						"name": "binsProper",
+						"type": "bool"
+					},
+					{
+						"internalType": "bool",
+						"name": "time24",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint256",
+						"name": "temperature",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct WasteManage.HospitalWaste[]",
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_id",
+				"type": "uint256"
+			}
+		],
+		"name": "getHospitalWasteId",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "bool",
+						"name": "isSegregated",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint256",
+						"name": "quantity",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "bQuantity",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "isStored",
+						"type": "bool"
+					},
+					{
+						"internalType": "bool",
+						"name": "binsProper",
+						"type": "bool"
+					},
+					{
+						"internalType": "bool",
+						"name": "time24",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint256",
+						"name": "temperature",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct WasteManage.HospitalWaste",
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getTransportWaste",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "vehicleNumber",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "status",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "eArrival",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "wasteRecorded",
+						"type": "string"
+					}
+				],
+				"internalType": "struct WasteManage.TransportWaste[]",
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_id",
+				"type": "uint256"
+			}
+		],
+		"name": "getTransportWasteId",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "vehicleNumber",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "status",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "eArrival",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "wasteRecorded",
+						"type": "string"
+					}
+				],
+				"internalType": "struct WasteManage.TransportWaste",
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+]
